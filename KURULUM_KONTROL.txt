@@ -1,0 +1,11 @@
+BEBETEPE GARDEN KURULUM KONTROL LİSTESİ
+[ ] Supabase projesi açıldı
+[ ] supabase/schema.sql çalıştırıldı
+[ ] Uygulama HTTPS hostinge yayımlandı
+[ ] Android Chrome'da açıldı ve ana ekrana eklendi
+[ ] Oturum açma ve rol yetkileri uygulamaya entegre edildi
+[ ] Yönetici ve personel ayrı ayrı test edildi
+[ ] Rezervasyon ve ödeme kayıtları test edildi
+[ ] Organizasyon formu yazdırma/PDF test edildi
+[ ] Yedekleme planı belirlendi
+Not: Bu paket arayüz başlangıcıdır; Supabase bağlantısı tamamlanmadan gerçek müşteri verisi girmeyin.
