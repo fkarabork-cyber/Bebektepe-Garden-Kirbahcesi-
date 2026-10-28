@@ -1,0 +1,38 @@
+
+name: Build Bebektepe Garden APK
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "android-app/**"
+      - ".github/workflows/main.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kaynak kodu indir
+        uses: actions/checkout@v4
+
+      - name: Java kurulumu
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Android APK oluştur
+        uses: android-actions/setup-android@v3
+
+      - name: APK dosyasını derle
+        run: |
+          cd android-app
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
+      - name: APK dosyasını indirilebilir yap
+        uses: actions/upload-artifact@v4
+        with:
+          name: Bebektepe-Garden-APK
+          path: android-app/app/build/outputs/apk/debug/app-debug.apk
+          
