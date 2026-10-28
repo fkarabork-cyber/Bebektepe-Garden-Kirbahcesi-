@@ -22,7 +22,7 @@ jobs:
           java-version: "17"
 
       - name: Android APK oluştur
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
 
       - name: APK dosyasını derle
         run: |
